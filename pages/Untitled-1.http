@@ -1,0 +1,37 @@
+GET http://localhost:1337/cart-items
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkyODA3Nzk3LCJleHAiOjE2OTUzOTk3OTd9.h0CLG5r_bqgbHrmRYc7w6_bE6a3qUOfCYyul81_xgvY
+###
+
+POST http://localhost:1337/auth/local
+Content-Type: application/json
+
+{
+    "identifier": "alice@example.com",
+    "password": "Alice123"
+}
+
+###
+
+GET http://localhost:1337/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkyODA3Nzk3LCJleHAiOjE2OTUzOTk3OTd9.h0CLG5r_bqgbHrmRYc7w6_bE6a3qUOfCYyul81_xgvY
+
+###
+POST http://localhost:1337/auth/local/register
+Content-Type: application/json
+
+{
+    "username": "Charlie",
+    "email": "charlie@example.com",
+    "password": "Charlie123"
+}
+
+###
+POST  http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email": "alice@example.com",
+    "password": "Alice123"
+}
+
+###
